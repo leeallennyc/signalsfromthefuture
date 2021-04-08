@@ -1,9 +1,12 @@
 <template>
 <div class="common-layout">
    <el-container>
-    <el-header>Header</el-header>
+    <el-header>
+      <i class="el-icon-more-outline"></i>
+      MAPPING AI PATENT LANDSCAPES
+    </el-header>
     <el-container>
-      <el-aside width="300px">Aside</el-aside>
+      <el-aside width="225px">Aside</el-aside>
       <el-container>
         <el-main>
         <img class="logo" alt="Vue logo" src="./assets/logo.png">
@@ -57,21 +60,34 @@ export default {
 .btn {
   margin-top: 100px;
 }
- .el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
+ .el-header {
+    background-color: black;
+    font-family: 'Futura','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: floralwhite;
+    text-align: left;
     line-height: 60px;
   }
   .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
+    background-color: floralwhite;
+    color: darkslategray;
     text-align: center;
+    opacity: 100%;
+    border: solid black .5px;
     line-height: 200px;
   }
-
+  .el-footer {
+    background-color: white;
+    color: black;
+    border: solid grey .5px;
+    text-align: center;
+    line-height: 60px;
+  }
   .el-container:nth-child(5) .el-aside,
   .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
+    line-height: 200px;
+  }
+  .el-icon-more-outline {
+    color: orange;
+    align-items: left;
   }
 </style>

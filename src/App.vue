@@ -71,7 +71,7 @@ export default {
     background-color: floralwhite;
     color: darkslategray;
     text-align: center;
-    opacity: 100%;
+    opacity: .8;
     border: solid black .5px;
     line-height: 200px;
   }

@@ -9,7 +9,7 @@
       <el-aside width="225px">Aside</el-aside>
       <el-container>
         <el-main>
-        <img class="logo" alt="Vue logo" src="./assets/logo.png">
+        <img class="logo" alt="preview" src="./assets/preview.png">
           <HelloWorld :msg="msg"/>
             <div class="btn">
               <el-button type="primary" @click="startHacking">
@@ -33,9 +33,9 @@ export default {
     HelloWorld
   },
   setup() {
-    const msg = ref("Welcome to Element Plus, a Vue 3.0 based component library")
+    const msg = ref("Text Here")
     const startHacking = () => {
-      msg.value = "Start coding with Element Plus with 💖"
+      msg.value = "Switches to this after the Button is pressed"
     }
     return {
       msg,

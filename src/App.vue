@@ -168,7 +168,7 @@ export default {
   width: 50%;
 }
 .btn {
-  margin-top: 100px;
+  margin-top: 50px;
 }
  .el-header {
     background-color: black;
@@ -217,12 +217,11 @@ export default {
   .el-radio-button__inner{
     background-color: black;
     padding: 7px 35px;
-    color: white;
+    color: rgb(249, 244, 244);
     border-left:0;
     border-left-width: 1px;
     border-left-color: white;
     border-left-style: solid;
-
   }
 
   .el-radio-button__orig-radio:checked+.el-radio-button__inner{
@@ -231,6 +230,16 @@ export default {
     border-color: orange;
     color: white;
   } 
+
+  .el-submenu__title{
+    color: grey;
+  }
+
+  .el-menu-item.is-active{
+    color: orange;
+  } 
+
+
 
 </style>
 

@@ -51,7 +51,7 @@
       </el-aside>
       <el-container>
         <el-main>
-        <img class="logo" alt="preview" src="./assets/u.s.patent_landscape.png">
+        <img class="logo" alt="preview" src="./assets/preview.png">
           <HelloWorld :msg="msg"/>
             <div class="btn">
               <el-button type="primary" @click="startHacking">

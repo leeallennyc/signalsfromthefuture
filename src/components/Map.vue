@@ -348,7 +348,6 @@ a, a:hover, a:visited {
 }
 
 .el-icon-caret-left:before {
-    content: "";
     color: orange;
 }
 

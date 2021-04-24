@@ -1,5 +1,4 @@
 <template>
-
 <div class="common-layout">
     <el-container>
     <el-header>MAPPING AI PATENT LANDSCAPES</el-header>
@@ -52,15 +51,19 @@
       </el-aside>
       <el-container>
         <el-main>
-        <!-- <img class="logo" alt="preview" src="./assets/preview.png"> -->
+        <!-- <img class="logo" alt="preview" src= "../assets/preview.png"> -->
+          <!-- <div id = "sandDanceVue"><SandDanceVue/></div> -->
           <!-- <HelloWorld :msg="msg"/> -->
+          <!-- <BaseMap/> -->
+          <Button text="Go to Map" color = "blue" />
+          <Button text="Go to Charts" color = "red"/>
+          <Button text="Go to Clusters" color = "orange"/>
             <div class="btn">
               <el-button type="primary" @click="startHacking">
               Enter Map
             </el-button>
           </div>
           </el-main>
-
 <el-menu class="el-menu-inner-aside" 
         @open="handleOpen"
         @close="handleClose"
@@ -113,21 +116,23 @@
         </el-submenu>
       </el-submenu>
     </el-menu>
-
         <el-footer><i class="el-icon-info"></i></el-footer>
       </el-container>
     </el-container>
   </el-container>
 </div>
-
 </template>
 <script>
 import { ref } from 'vue'
-// import HelloWorld from './components/HelloWorld.vue'
+// import BaseMap from './components/InteractiveMap.vue'
+// import SandDanceVue from '../components/SandDance.vue'
+import Button from '../components/Button.vue'
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    // BaseMap,
+    // SandDanceVue,
+    Button
   },
   data() {
     return {
@@ -164,13 +169,17 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+.common-layout{
+  width: 100%;
+  height: auto;
+}
 .logo {
   width: 50%;
 }
 .btn {
   margin-top: 50px;
 }
- .el-header {
+.el-header {
     background-color: black;
     border: solid gray 0.5px;
     font-family: 'Futura','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -178,42 +187,42 @@ export default {
     text-align: center;
     line-height: 60px;
   }
-  .el-aside {
+.el-aside {
     background-color: black;
     color: white;
     text-align: center;
     line-height: 50px;
   }
-  .el-footer {
+.el-footer {
     background-color: black;
     color: white;
     border: solid grey .5px;
     text-align: center;
     line-height: 60px;
   }
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
     line-height: 200px;
   }
-  .el-icon-more-outline {
+.el-icon-more-outline {
     color: orange;
     align-items: left;
   }
-  .el-icon-map-location {
+.el-icon-map-location {
     color: orange;
   }
-  .el-icon-info {
+.el-icon-info {
     align-items: right;
   }
-  .el-menu{
+.el-menu{
     background-color: black;
     font-family: 'Futura','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
+.el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
     min-height: 400px;
-  }
-  .el-radio-button__inner{
+}
+.el-radio-button__inner{
     background-color: black;
     padding: 7px 35px;
     color: rgb(249, 244, 244);
@@ -222,16 +231,22 @@ export default {
     border-left-color: white;
     border-left-style: solid;
   }
-  .el-radio-button__orig-radio:checked+.el-radio-button__inner{
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
     background-color: black;
     padding: 7px 35px;
     border-color: orange;
     color: white;
   } 
-  .el-submenu__title{
+.el-submenu__title{
     color: grey;
   }
-  .el-menu-item.is-active{
+.el-menu-item.is-active{
     color: orange;
   } 
+
+#sandDanceVue{
+    width: 90%;
+    height: 90%;
+    background-color: red;
+}
 </style>

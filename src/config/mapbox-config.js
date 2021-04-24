@@ -6,20 +6,20 @@ export const config = {
     footer: 'footer',
     chapters: [
         {
-            id: 'U.S. Patents',
+            id: 'AI-Patents',
             alignment: 'left',
-            title: 'All U.S.',
-            image: '../assets/logo.png',
-            description: 'In 2019, 2.7 million patent applications were filed at the IP5 Offices and together the IP5 Offices granted 1.6 million patents.', 
+            title: 'Signals From the Future',
+            description: 'Visualizes AI-related patent filings by region in the United States between 2016-2020. I explore this AI landscape through U.S. census data and approximately 2,300 patents containing the words “machine learning”in the abstract. This research provides a tool for entrepreneurs and investors who are interested in learning about where trends are headed in AI, for commercialization offices within research institutes, who may want to partner with companies who are setting up AI labs nearest them, or to policy makers, who may be searching for a clearer picture into AI patent filings in relation to their communities.', 
+            image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2Fcolor_legend-01.png?v=1619203727208',
             location: {
-                center: [-125.32462, 38.59684],
-                zoom: 3.03,
-                pitch: 0.00,
+                center: [-120.32890, 38.42151],
+                zoom: 3.5,
+                pitch: 40,
                 bearing: 0.00
             },
             onChapterEnter: [
                 // {
-                //     layer: 'mapbox-satellite',
+                //     layer: 'leeallennyc-1p1v73ei',
                 //     opacity: 0
                 // }, 
                 // {
@@ -28,165 +28,18 @@ export const config = {
                 // }
             ],
             onChapterExit: [
+            
             ]
         },
         {
-            id: 'West Coast',
+            id: 'Dartmouth',
             alignment: 'right',
-            title: 'West Coast',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
+            title: 'Dartmouth College, NH',
+            description: 'The term "Artificial Intelligence" was coined during a 1956 Dartmouth Summer Research Project at Dartmouth College. Since that time over 340,000 AI-related inventions and 1.6 million AI-related scientific papers have been published, according to the World Intellectual Property Organization (WIPO). Machine learning, a technique in AI is found in 40% of all AI-related patents.', 
             location: {
-                center: [-113.26320, 40.50439],
-                zoom: 4.25,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'California',
-            alignment: 'right',
-            title: 'California',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-113.97253, 37.74377],
-                zoom: 5.21,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'Palo Alto',
-            alignment: 'right',
-            title: 'Palo Alto',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-121.32126, 37.48246],
-                zoom: 8.28,
-                pitch: 52.00,
-                bearing: 9.60
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'Stanford',
-            alignment: 'right',
-            title: 'Stanford',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-122.16851, 37.42612],
-                zoom: 14.41,
-                pitch: 52.00,
-                bearing: 9.60
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'Central U.S.',
-            alignment: 'right',
-            title: 'Central',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-112.32890, 37.42151],
-                zoom: 5.56,
-                pitch: 60.00,
-                bearing: -1.40
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'Central U.S. 2',
-            alignment: 'right',
-            title: 'Central 2',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-98.77829, 38.14120],
-                zoom: 4.77,
-                pitch: 60.00,
-                bearing: -1.40
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'East and South',
-            alignment: 'right',
-            title: 'East and South',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-82.87281, 33.07152],
-                zoom: 5.33,
-                pitch: 44.50,
-                bearing: 0.00
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }
-            ],
-            onChapterExit: [
-            ]
-        },
-        {
-            id: 'East Coast',
-            alignment: 'right',
-            title: 'East Coast',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-72.27751, 40.71237],
-                zoom: 5.51,
-                pitch: 60.00,
+                center: [-70.288692,  44.704440],
+                zoom: 6.51,
+                pitch: 40.00,
                 bearing: 13.60
             },
             onChapterEnter: [
@@ -199,11 +52,11 @@ export const config = {
             ]
         },
         {
-            id: 'Cambridge, MA',
-            alignment: 'right',
-            title: 'Cambridge, MA',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
+            id: 'History',
+            alignment: 'centered',
+            title: '',
+            image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FAI_History-01.png?v=1619199240199',
+            description: '', 
             location: {
                 center: [-71.07969, 42.35707],
                 zoom: 8.56,
@@ -224,80 +77,47 @@ export const config = {
             ]
         },
         {
-            id: 'NY, NY',
-            alignment: 'right',
-            title: 'New York, NY',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
+            id: 'ML-patents',
+            alignment: 'fully',
+            title: 'Machine Learning',
+            image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FML_Sample_2016-2020.png?v=1619189991816',
+            description: 'Patent abstract sample containing "Machine Learning" 2016-2020 Data | USPTO', 
             location: {
-                center: [-72.98474, 40.56683],
-                zoom: 7.83,
-                pitch: 51.00,
-                bearing: 21.89
+                center: [-72.27751, 40.71237],
+                zoom: 5.51,
+                pitch: 60.00,
+                bearing: 13.60
             },
             onChapterEnter: [
                 // {
                 //     layer: 'mapbox-satellite',
                 //     opacity: 0
-                // }, 
-                // {
-                //     layer: 'leeallennyc-1p1v73ei',
-                //     opacity: 1
                 // }
             ],
             onChapterExit: [
             ]
         },
         {
-            id: 'Baltimore, MD',
+            id: 'US-Macro',
             alignment: 'right',
-            title: 'Baltimore',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
+            title: 'U.S. Mapping',
+            // image: 'images/manhattan_test_2.png',
+            description: '', 
             location: {
-                center: [-75.70624, 39.18171],
-                zoom: 7.38,
-                pitch: 34.00,
-                bearing: 0.03
+                center: [-80.32890, 40.42151],
+                zoom: 3.6,
+                pitch: 40,
+                bearing: 0.00
             },
             onChapterEnter: [
                 // {
                 //     layer: 'mapbox-satellite',
                 //     opacity: 0
-                // }, 
-                // {
-                //     layer: 'leeallennyc-1p1v73ei',
-                //     opacity: 1
                 // }
             ],
             onChapterExit: [
             ]
         },
-        {
-            id: 'Baltimore Close up',
-            alignment: 'right',
-            title: 'test1',
-            image: 'images/manhattan_test_2.png',
-            description: 'MORE PATENTS', 
-            location: {
-                center: [-77.04516, 38.88927],
-                zoom: 11.59,
-                pitch: 34.00,
-                bearing: 0.03
-            },
-            onChapterEnter: [
-                // {
-                //     layer: 'mapbox-satellite',
-                //     opacity: 0
-                // }, 
-                // {
-                //     layer: 'leeallennyc-1p1v73ei',
-                //     opacity: 1
-                // }
-            ],
-            onChapterExit: [
-            ]
-        }
     ]
 };
 

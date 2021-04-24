@@ -1,6 +1,6 @@
 <template>
 <div class='App'>
-  <div id="map"></div>
+  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-caret-left" circle id="home-button"></el-button></div></div>
   <div id="story"></div>
 </div>
 </template>
@@ -35,11 +35,12 @@ var alignments = {
     'right': 'righty',
     'full': 'fully'
 }
-console.log(alignments);
+// console.log(alignments);
 function getLayerPaintType(layer, map) {
     var layerType = map.getLayer(layer).type;
     return layerTypes[layerType];
 }
+
 function setLayerOpacity(layer, map) {
     var paintProps = getLayerPaintType(layer.layer);
     paintProps.forEach(function(prop) {
@@ -53,9 +54,8 @@ function setLayerOpacity(layer, map) {
     });
 }
 
-
 export default {
-  name: 'App',
+  name: 'App', 
   data() {
     return {
       width: 400,
@@ -145,9 +145,9 @@ if (header.innerText.length > 0) {
       interactive: false,
       transformRequest: transformRequest
       });
-    this.showMarkers(config, this.mb)
+    // this.showMarkers(config, this.mb)
     var scroller = scrollama();
-    console.log(window);
+    // console.log(window);
     const that = this;
     this.mb.on("load", function() {
     if (config.use3dTerrain) {
@@ -170,7 +170,6 @@ if (header.innerText.length > 0) {
             }
         });
     }
-    // const mb = that.mb;
     // setup the instance, pass callback functions
     scroller
     .setup({
@@ -181,7 +180,7 @@ if (header.innerText.length > 0) {
     .onStepEnter(response => {
         
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
-        console.log("TESTING", that.mb,chapter);
+        // console.log("TESTING", that.mb,chapter);
         response.element.classList.add('active');
         that.mb[chapter.mapAnimation || 'flyTo'](chapter.location);
         // if (config.showMarkers) {
@@ -215,7 +214,6 @@ if (header.innerText.length > 0) {
   // setup resize event
   window.addEventListener('resize', scroller.resize)
 },
-
   computed: {
     // projection() {
     //   return d3.geoEqualEarth()
@@ -228,124 +226,146 @@ if (header.innerText.length > 0) {
     // }
   },
   methods: {
-    // onHover(nextHover) {
-    //   if (nextHover === null) {
-    //     d3.select('#hover').text('')
-    //     return;
-    //   }
-    //   const projectedCentroid = this.projection(nextHover.centroid)
-    //   d3.select('#hover').text(nextHover.admin)
-    //     .attr('x', projectedCentroid[0])
-    //     .attr('y', projectedCentroid[1])
-    // }
-        showMarkers(config, map) {
-          if (config.showMarkers){
-            var marker = new mapboxgl.Marker({ color: config.markerColor });
-            marker.setLngLat(config.chapters[0].location.center).addTo(map);
-            }
-        }
+    enterHome(){
+      this.$router.push("/")
     }
+  },
+    // showMarkers(config, map) {
+    //     if (config.showMarkers){
+    //     var marker = new mapboxgl.Marker({ color: config.markerColor });
+    //     marker.setLngLat(config.chapters[0].location.center).addTo(map);
+    //     }
+    // }
 }
+
 </script>
 
 <style>
-        body {
-            margin:0;
-            padding:0;
-            font-family: sans-serif;
-        }
-        a, a:hover, a:visited {
-            color: #0071bc;
-        }
-        #map {
-            top:0;
-            height: 100vh;
-            width: 100vw;
-            position: fixed;
-        }
-        #header {
-            margin: auto;
-            width: 100%;
-            height: 100vw;
-            position: relative;
-            z-index: 5;
-        }
-        #header h1, #header h2, #header p{
-            margin: 0;
-            padding: 2vh 2vw;
-            text-align: center;
-        }
-        #footer {
-            width: 100%;
-            min-height: 5vh;
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-            text-align: center;
-            line-height: 25px;
-            font-size: 13px;
-            position: relative;
-            z-index: 5;
-        }
-        #features {
-            padding-top: 10vh;
-            padding-bottom: 10vh;
-        }
-        .hidden {
-            visibility: hidden;
-        }
-        .centered {
-            width: 50vw;
-            margin: 0 auto;
-        }
-        .lefty {
-            width: 33vw;
-            margin-left: 5vw;
-        }
-        .righty {
-            width: 33vw;
-            margin-left: 62vw;
-        }
-        .fully {
-            width: 100%;
-            margin: auto;
-        }
-        .light {
-            color: #444;
-            background-color: #fafafa;
-        }
-        .dark {
-            color: #fafafa;
-            background-color: black;
-            font-family: Futura, Verdana, Geneva, Tahoma, sans-serif;
-            color: orange;
-            width: 100%
-        }
-        .step {
-            padding-bottom: 60vh;
-            /* margin-bottom: 10vh; */
-            opacity: 0.10;
-        }
-        .step.active {
-            opacity: 0.85;
-        }
-        .step div {
-            padding:  25px 50px;
-            line-height: 25px;
-            font-size: 13px;
-        }
-        .step img {
-            width: 100%;
-        }
-        @media (max-width: 750px) {
-            .centered, .lefty, .righty, .fully {
-                width: 90vw;
-                margin: 0 auto;
-            }
-        }
-        /* Fix issue on mobile browser where scroll breaks  */
-        .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
-        .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
-            touch-action: unset;
-        }
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+a, a:hover, a:visited {
+    color: #0071bc;
+}
+#map {
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+#header {
+    margin: auto;
+    width: 100%;
+    height: 100vw;
+    position: relative;
+    z-index: 5;
+}
+#header h1, #header h2, #header p{
+    margin: 0;
+    padding: 2vh 2vw;
+    text-align: center;
+}
+#footer {
+    width: 100%;
+    min-height: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    position: relative;
+    z-index: 5;
+}
+#features {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.hidden {
+    visibility: hidden;
+}
+.centered {
+    width: 75vw;
+    margin: 0 auto;
+}
+.lefty {
+    width: 33vw;
+    margin-left: 5vw;
+}
+.righty {
+    width: 33vw;
+    margin-left: 62vw;
+}
+.fully {
+    width: 100%;
+    margin: auto;
+}
+.light {
+    color: #444;
+    background-color: #fafafa;
+}
+.dark {
+    color: #fafafa;
+    background-color: black;
+    font-family: Futura, Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    text-align: left;
+}
+
+.step {
+    padding-bottom: 60vh;
+    /* margin-bottom: 10vh; */
+    opacity: 0.10;
+}
+.step.active {
+    opacity: 0.85;
+}
+.step div {
+    padding:  25px 50px;
+    line-height: 25px;
+    font-size: 16px;
+}
+.step img {
+    width: 100%;
+    height: auto;
+}
+.mapboxgl-canvas #home-button {
+    position: fixed;
+    width: 40px;
+    height: 100px;
+    top: 50%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: black;
+    font-size: 20px;
+    padding: 0px;
+    border-color:orange;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.el-icon-caret-left:before {
+    content: "";
+    color: orange;
+}
+
+
+@media (max-width: 750px) {
+    .centered, .lefty, .righty, .fully {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+/* Fix issue on mobile browser where scroll breaks  */
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+    touch-action: unset;
+}
+
+
+
 </style>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img @click="enterApp" alt="map-home" src="@/assets/preview.png">
+    <img class="homeimage" @click="enterApp" alt="map-home" src="@/assets/preview.png">
     <el-button @click="enterApp" icon="el-icon-caret-right" circle id="home-button"></el-button>
   </div>
 </template>
@@ -25,8 +25,8 @@ export default {
   background-color: #040810;
 }
 
-img {
-  width: 100%;
+.homeimage {
+  width: 90vw;
   height: auto;
 }
 

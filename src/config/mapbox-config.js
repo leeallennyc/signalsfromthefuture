@@ -55,7 +55,7 @@ export const config = {
             id: 'History',
             alignment: 'centered',
             title: '',
-            image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FAI_History-01.png?v=1619199240199',
+            image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FAI_History-01.png?v=1619718299803',
             description: '', 
             location: {
                 center: [-71.07969, 42.35707],

@@ -63,7 +63,7 @@ export default {
       mb: null
     }
   },
-   mounted() {
+  mounted() {
     // https://dev.to/hmintoh/how-to-mapbox-with-vue-js-2a34
 
     var story = document.getElementById('story');

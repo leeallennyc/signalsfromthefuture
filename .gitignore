@@ -24,3 +24,5 @@ pnpm-debug.log*
 
 *.mapbox-config.js
 *.vue-config.js
+*.mapbox-config.js
+*.mapbox2-config.js

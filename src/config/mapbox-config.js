@@ -3,7 +3,7 @@ export const config = {
     accessToken: 'pk.eyJ1IjoibGVlYWxsZW5ueWMiLCJhIjoiY2tua29iNnY3MDhzMDJ2cXZsOXcxYm16ZyJ9.7aoH1zArV6cyV_CSsw693A',
     showMarkers: false,
     theme: 'dark',
-    footer: 'U.S. COUNTY CLUSTERS',
+    footer: 'U.S. REGIONAL HOTSPOTS',
     chapters: [
         {
             id: 'AI-Patents',
@@ -100,8 +100,8 @@ export const config = {
         {
             id: 'Clusters',
             alignment: 'fully',
-            title: 'U.S. County Clusters',
-            // image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FML_Sample_2016-2020.png?v=1619189991816',
+            title: '',
+            image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FCOUNTY_REGIONS.png?v=1620156072460',
             description: '', 
             location: {
                 center: [-80.32890, 40.42151],

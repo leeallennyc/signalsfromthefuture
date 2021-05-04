@@ -1,11 +1,21 @@
 <template>
 <div class='App'>
-  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-location-information" circle id="map-button"></el-button></div></div>
+  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-s-data" circle id="map-button"></el-button></div></div>
   
-  <div id="story">
-  <div id="start"></div>
-  </div>
-  <div id="countyClusters"></div>
+<div id="story">
+<div id="start"></div>
+</div>
+<div id="countyClusters">
+    <el-card>
+    <el-row>
+    <el-col :span="12"><div class="grid-content bg-purple"><h3>U.S. County Clusters</h3><p>There are <strong>10</strong> main clusters which account for <strong>86%</strong> of all the AI patents filed in our sample. We look at the latitude and longitude of the companies who are granted the patents, the concentration of patents within these regional clusters which contain the term "machine learning" in the abstract to better understand how these patents are clustering throughout the U.S.</p><p>Another variable considered was Personal Income by County Area for the years 2017, 2018, and 2019 -- in addition to the percentage change from the previous year. We found a positive weak correlation in our sample between numbers of patents per county and personal income expressed as +0.34.</p><p>Interestingly we also found a regionalism toward certain types of sectors and AI techniques per region.</p>
+    <el-button @click="enterMap" icon = "el-icon-s-data" circle id="insights-button">Insights</el-button>
+    </div>
+    </el-col>
+    <el-col :span="12"><div class="grid-content bg-purple-light"><img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FNumber_of_patents_granted-01.png?v=1620071696600"></div></el-col>
+    </el-row>
+    </el-card>
+</div>
 </div>
 </template>
 
@@ -255,7 +265,7 @@ body {
     font-family: sans-serif;
 }
 a, a:hover, a:visited {
-    color: #0071bc;
+    color: gray;
 }
 #map {
     top:0;
@@ -321,7 +331,6 @@ a, a:hover, a:visited {
     width: 100%;
     text-align: left;
 }
-
 .step {
     padding-bottom: 60vh;
     /* margin-bottom: 10vh; */
@@ -339,9 +348,14 @@ a, a:hover, a:visited {
     width: 100%;
     height: auto;
 }
+
+.el-button {
+    text-align: center;
+}
+
 .mapboxgl-canvas #home-button {
     position: fixed;
-     z-index: 9999;
+    z-index: 9999;
     width: 40px;
     height: 50px;
     top: 10%;
@@ -351,14 +365,15 @@ a, a:hover, a:visited {
     background-color: black;
     font-size: 20px;
     padding: 0px;
-    border-color:orange;
+    border-color: black;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
 .mapboxgl-canvas #map-button {
     position: fixed;
-     z-index: 9999;
+    z-index: 9999;
     width: 40px;
     height: 50px;
     top: 17%;
@@ -368,21 +383,28 @@ a, a:hover, a:visited {
     background-color: black;
     font-size: 20px;
     padding: 0px;
-    border-color:orange;
+    border-color: black;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 10px;
+}
+
+.el-card__body {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
 }
 
 .el-icon-s-home {
-    color: orange;
+    color: gray;
 }
 .el-icon-s-home:hover{
     color: lightgray;
 }
 
-
 .el-icon-location-information {
-    color: orange;
+    color: gray;
 }
 .el-icon-location-information:hover {
     color: lightgrey;
@@ -392,6 +414,45 @@ a, a:hover, a:visited {
     margin-left: 0px;
 }
 
+#insights-button{
+    position: flex;
+    width: 100px;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    font-size: 20px;
+    padding: 0px;
+    border-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.el-row {
+    margin-bottom: 20px;
+}
+.el-col {
+    border-radius: 2px;
+}
+
+.grid-content {
+    border-radius: 2px;
+    min-width: 50vw;
+    min-height: 36px;
+    margin-left: 45px;
+    margin-right: 40px;
+}
+
+.bg-purple {
+    background: white;
+    text-align: left;
+}
+.bg-purple-light {
+    background: white;
+}
 
 @media (max-width: 750px) {
     .centered, .lefty, .righty, .fully {
@@ -413,7 +474,7 @@ a, a:hover, a:visited {
 
 #countyClusters {
     width: 100vw;
-    height: 1000px;
+    height: auto;
     background-color: white;
     opacity: 100%;
     position: absolute;

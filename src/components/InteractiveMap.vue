@@ -1,19 +1,11 @@
 <template>
-   <div class='map-overlay' id='features'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-location-information" circle id="map-button"></el-button><h2>MACHINE LEARNING COUNTY CLUSTERS</h2><div id='pd'>
+   <div class='map-overlay' id='features'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-location-information" circle id="map-button"></el-button><h2>TOP 10 REGIONAL COUNTIES FOR MACHINE LEARNING PATENTS</h2><div id='pd'>
   </div></div>
   <div class='map-overlay' id='legend'></div>
-
-<el-card>
-  <el-row>
-  <el-col :span="12"><div class="grid-content bg-purple"><h3>U.S. County Clusters</h3><p>There are <strong>10</strong> main clusters which account for <strong>86%</strong> of all the AI patents filed in our sample. We look at the latitude and longitude of the companies who are granted the patents, the concentration of patents within these regional clusters which contain the term "machine learning" in the abstract to better understand how these patents are clustering throughout the U.S.</p><p>Another variable considered was Personal Income by County Area for the years 2017, 2018, and 2019 -- in addition to the percentage change from the previous year. We found a positive weak correlation in our sample between numbers of patents per county and personal income expressed as +0.34.</p><p>Interestingly we also found a regionalism toward certain types of sectors and AI techniques per region.</p></div></el-col>
-  <el-col :span="12"><div class="grid-content bg-purple-light"><img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FNumber_of_patents_granted-01.png?v=1620071696600"></div></el-col>
-  </el-row>
-  </el-card>
-
   <el-card>
     <el-card><div id="innerContainer">
       <h2>SANTA CLARA COUNTY, CALIFORNIA</h2>
-      <div id= "chart"><p>This "megacluster" is made up of Alameda, San Francisco, San Mateo, and Santa Clara. Marin and Contra Costa Counties are to the north. It remains the largest U.S. cluster in our sample, accounting for 38.6% of AI patents filed. </p></div>
+      <div id= "chart"><p>This "megaregion" is made up of Alameda, San Francisco, San Mateo, and Santa Clara. Marin and Contra Costa Counties are to the north. It remains the largest U.S. cluster in our sample, accounting for 38.6% of AI patents filed.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FSanta_Clara_Counties.png?v=1619995161141">
       </div>
       </el-card>
@@ -23,7 +15,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>LOS ANGELES COUNTY, CALIFORNIA</h2>
-      <div id= "chart"><p>The Cluster is made up of Orange, San Diego, and Los Angeles Counties. Santa Barbara and Monterey are the northwest. This cluster makes up 6.1% of AI patents filed in our sample. </p></div>
+      <div id= "chart"><p>The region is made up of Orange, San Diego, and Los Angeles Counties. Santa Barbara and Monterey are the northwest. This region makes up 6.1% of AI patents filed in our sample. </p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FLosAngeles_Counties.png?v=1619995248246">
       </div></el-card>
     <div id="mapContainer2">{{BaseMap}}</div>
@@ -50,7 +42,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>TRAVIS & HARRIS COUNTIES, TEXAS</h2>
-      <div id= "chart"><p>Travis/William Counties, and Harris/Fort Bend make up two microclusters, with a third to the north made up Collin, Dallas, and Tarrant counties. The Travis and Harris clusters make up 2% of AI Patents granted in our sample.</p></div>
+      <div id= "chart"><p>Travis/William Counties, and Harris/Fort Bend make up two smaller regions, with a third to the north made up Collin, Dallas, and Tarrant counties. The Travis and Harris county region make up 2% of AI Patents granted in our sample.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FTexas_Counties.png?v=1619995233117">
       </div></el-card>
     <div id="mapContainer5">{{BaseMap}}</div>
@@ -59,7 +51,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>WESTCHESTER COUNTY, NEW YORK </h2>
-      <div id= "chart"><p>Westchester and Queens County create a microculster within a megacluster of the East Coast. AI Patent activity connects 17 Counties in this region from Western Massachusetts to Ocean County New Jersey. These 17 counties make up 11.8% of all AI patents filed in our sample.</p></div>
+      <div id= "chart"><p>Westchester and Queens County create a micro-region within a larger mega-region of the East Coast. AI Patent activity connects 17 Counties in this region from Western Massachusetts to Ocean County New Jersey. These 17 counties make up 11.8% of all AI patents filed in our sample.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FEastcoast_cluster_Counties.png?v=1619995300290">
       </div></el-card>
     <div id="mapContainer6">{{BaseMap}}</div>
@@ -68,7 +60,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>MIDDLESEX COUNTY, MASSACHUSETTS </h2>
-      <div id= "chart"><p>The Middlesex County Cluster stretches from Southern New Hampshire to the Southeastern coast of Massachusetts. This cluster consists of Rockingham, Bristol, Norfolk, Suffolk, and Middlesex. The home of M.I.T. and the Route 128 corridor, this cluster makes up 3.4% of AI patents filed within our sample.</p></div>
+      <div id= "chart"><p>The Middlesex County area stretches from Southern New Hampshire to the Southeastern coast of Massachusetts. This region consists of Rockingham, Bristol, Norfolk, Suffolk, and Middlesex. The home of M.I.T. and the Route 128 corridor, this region makes up 3.4% of AI patents filed within our sample.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FMassachusetts_Counties.png?v=1619995259679">
       </div></el-card>
     <div id="mapContainer7">{{BaseMap}}</div>
@@ -77,7 +69,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>FAIRFAX, MARYLAND </h2>
-      <div id= "chart"><p>Fairfax County cluster is joined by 10 counties, and the vast concentration of patents is within Fairfax county. The Fairfax cluster makes up 7.7% of the AI patents filed. </p></div>
+      <div id= "chart"><p>Fairfax County region is joined by 10 counties, and the vast concentration of patents is within Fairfax county. The Fairfax cluster makes up 7.7% of the AI patents filed. </p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FMaryland_Counties.png?v=1619995289989">
       </div></el-card>
     <div id="mapContainer8">{{BaseMap}}</div>
@@ -86,7 +78,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>FULTON COUNTY, GEORGIA </h2>
-      <div id= "chart"><p>Fulton and Cobb county make up the Fulton cluster, and it accounts for 2.1% of the AI patents granted in our sample</p></div>
+      <div id= "chart"><p>Fulton and Cobb counties make up the Fulton area region, and it accounts for 2.1% of the AI patents granted in our sample.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FGeorgia_counties.png?v=1619995244912">
       </div></el-card>
     <div id="mapContainer9">{{BaseMap}}</div>
@@ -95,7 +87,7 @@
   <el-card>
     <el-card><div id="innerContainer">
       <h2>WASHOE COUNTY, NEVADA </h2>
-      <div id= "chart"><p>Washoe county and Reno, Nevada are the home of Amazon Technologies, Inc. This one county makes up 0.8% of machine learning patents filed in our sample. All patents, will exception to one was granted to Amazon in this county. </p></div>
+      <div id= "chart"><p>Washoe county and Reno, Nevada are the home of Amazon Technologies, Inc. This one county makes up 0.8% of machine learning patents filed in our sample. All patents, with exception to one was granted to Amazon in this county. </p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FNevada_Counties.png?v=1619995241476">
       </div></el-card>
     <div id="mapContainer10">{{BaseMap}}</div>
@@ -237,7 +229,7 @@ export default {
       this.$router.push("/")
     },
     enterMap(){
-    this.$router.push("/interactive")
+    this.$router.push("/map")
     },
   },
 };
@@ -268,19 +260,20 @@ span {
 
 .map-overlay #home-button {
     position: fixed;
-     z-index: 9999;
+    z-index: 9999;
     width: 40px;
     height: 50px;
-    top: 10%;
+    top: 11%;
     left: 1.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: white;
     font-size: 20px;
     padding: 0px;
-    border-color:#8922a3;
+    border-color: white;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
 .map-overlay #map-button {
@@ -295,29 +288,15 @@ span {
     background-color: white;
     font-size: 20px;
     padding: 0px;
-    border-color: #8922a3;
+    border-color: white;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 10px;
 }
-/* 
-.el-icon-s-home {
-    color: #8922a3;
-}
-.el-icon-s-home:hover{
-    color: gray;
-}
-
-.el-icon-location-information {
-    color: #8922a3;
-}
-.el-icon-location-information:hover {
-    color: gray;
-} */
 
 #map-button{
     margin-left: 0px;
 }
-
 
 .el-button.el-button--primary {
   color: gray;
@@ -331,8 +310,12 @@ span {
   border-color: gray;
 }
 
+.el-button {
+    text-align: center;
+}
+
 h2 {
-  color:rgb(175, 163, 174);
+  color: rgb(171, 171, 171);
 }
 
 h2, h3 {
@@ -348,14 +331,14 @@ h3 {
   padding: 0px;
 }
 
-.el-row {
+/* .el-row {
     margin-bottom: 20px;
   }
   .el-col {
     border-radius: 2px;
-  }
+  } */
 
-  .grid-content {
+  /* .grid-content {
 
     border-radius: 2px;
     min-width: 50vw;
@@ -370,7 +353,7 @@ h3 {
   }
   .bg-purple-light {
     background: white;
-  }
+  } */
 
 #features {
   padding: 5px;

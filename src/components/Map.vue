@@ -359,12 +359,11 @@ a, a:hover, a:visited {
     width: 40px;
     height: 50px;
     top: 10%;
-    left: 1.5%;
+    left: 4px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: black;
     font-size: 20px;
-    padding: 0px;
     border-color: black;
     cursor: pointer;
     border-radius: 5px;
@@ -377,12 +376,11 @@ a, a:hover, a:visited {
     width: 40px;
     height: 50px;
     top: 17%;
-    left: 1.5%;
+    left: 4px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: black;
     font-size: 20px;
-    padding: 0px;
     border-color: black;
     cursor: pointer;
     border-radius: 5px;
@@ -476,9 +474,9 @@ a, a:hover, a:visited {
     width: 100vw;
     height: auto;
     background-color: white;
-    opacity: 100%;
+    opacity: 1;
     position: absolute;
-    z-index: 9000;
+    z-index: 9999;
 }
 </style>
 

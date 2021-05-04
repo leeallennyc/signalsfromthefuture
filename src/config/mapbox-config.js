@@ -3,18 +3,18 @@ export const config = {
     accessToken: 'pk.eyJ1IjoibGVlYWxsZW5ueWMiLCJhIjoiY2tua29iNnY3MDhzMDJ2cXZsOXcxYm16ZyJ9.7aoH1zArV6cyV_CSsw693A',
     showMarkers: false,
     theme: 'dark',
-    footer: 'footer',
+    footer: 'U.S. COUNTY CLUSTERS',
     chapters: [
         {
             id: 'AI-Patents',
             alignment: 'left',
             title: 'Signals From the Future',
-            description: 'Visualizes AI-related patent filings by region in the United States between 2016-2020. I explore this AI landscape through U.S. census data and approximately 2,300 patents containing the words “machine learning”in the abstract. This research provides a tool for entrepreneurs and investors who are interested in learning about where trends are headed in AI, for commercialization offices within research institutes, who may want to partner with companies who are setting up AI labs nearest them, or to policy makers, who may be searching for a clearer picture into AI patent filings in relation to their communities.', 
+            description: 'Visualizes AI-related patent filings by region in the United States between 2016-2020. I explore this AI landscape through U.S. census data and approximately 2,300 patents containing the words “machine learning” in the abstract. This research provides a tool for curious individuals who are interested in learning about where trends are headed in AI, for commercialization offices within research institutes, who may want to partner with companies who are setting up AI labs nearest them, or to policy makers, who may be searching for a clearer picture into AI patent filings in relation to their communities.', 
             image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2Fcolor_legend-01.png?v=1619203727208',
             location: {
-                center: [-120.32890, 38.42151],
-                zoom: 3.5,
-                pitch: 40,
+                center: [-125.32890, 38.42151],
+                zoom: 5,
+                pitch: 20,
                 bearing: 0.00
             },
             onChapterEnter: [
@@ -37,8 +37,8 @@ export const config = {
             title: 'Dartmouth College, NH',
             description: 'The term "Artificial Intelligence" was coined during a 1956 Dartmouth Summer Research Project at Dartmouth College. Since that time over 340,000 AI-related inventions and 1.6 million AI-related scientific papers have been published, according to the World Intellectual Property Organization (WIPO). Machine learning, a technique in AI is found in 40% of all AI-related patents.', 
             location: {
-                center: [-70.288692,  44.704440],
-                zoom: 6.51,
+                center: [-70.288692,  43.704440],
+                zoom: 5.75,
                 pitch: 40.00,
                 bearing: 13.60
             },
@@ -98,10 +98,10 @@ export const config = {
             ]
         },
         {
-            id: 'US-Macro',
-            alignment: 'right',
-            title: 'U.S. Mapping',
-            // image: 'images/manhattan_test_2.png',
+            id: 'Clusters',
+            alignment: 'fully',
+            title: 'U.S. County Clusters',
+            // image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FML_Sample_2016-2020.png?v=1619189991816',
             description: '', 
             location: {
                 center: [-80.32890, 40.42151],

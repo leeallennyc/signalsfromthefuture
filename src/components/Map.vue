@@ -1,7 +1,11 @@
 <template>
 <div class='App'>
-  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-caret-left" circle id="home-button"></el-button></div></div>
-  <div id="story"></div>
+  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-location-information" circle id="map-button"></el-button></div></div>
+  
+  <div id="story">
+  <div id="start"></div>
+  </div>
+  <div id="countyClusters"></div>
 </div>
 </template>
 
@@ -11,6 +15,7 @@ import mapboxgl from "mapbox-gl";
 import {config} from "../config/mapbox-config.js";
 import "intersection-observer";
 import scrollama from "scrollama";
+// import BaseMap from "../components/InteractiveMap.vue";
 
 
 const transformRequest = (url) => {
@@ -228,7 +233,10 @@ if (header.innerText.length > 0) {
   methods: {
     enterHome(){
       this.$router.push("/")
-    }
+    },
+    enterMap(){
+    this.$router.push("/interactive")
+    },
   },
     // showMarkers(config, map) {
     //     if (config.showMarkers){
@@ -251,14 +259,14 @@ a, a:hover, a:visited {
 }
 #map {
     top:0;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     position: fixed;
 }
 #header {
     margin: auto;
-    width: 100%;
-    height: 100vw;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     z-index: 5;
 }
@@ -273,8 +281,9 @@ a, a:hover, a:visited {
     padding-top: 2vh;
     padding-bottom: 2vh;
     text-align: center;
+    font-family: Futura, Verdana, Geneva, Tahoma, sans-serif;
     line-height: 25px;
-    font-size: 13px;
+    font-size: 1.4em;
     position: relative;
     z-index: 5;
 }
@@ -332,10 +341,11 @@ a, a:hover, a:visited {
 }
 .mapboxgl-canvas #home-button {
     position: fixed;
+     z-index: 9999;
     width: 40px;
-    height: 100px;
-    top: 50%;
-    left: 2%;
+    height: 50px;
+    top: 10%;
+    left: 1.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: black;
@@ -344,11 +354,42 @@ a, a:hover, a:visited {
     border-color:orange;
     cursor: pointer;
     border-radius: 5px;
-    z-index: 9999;
 }
 
-.el-icon-caret-left:before {
+.mapboxgl-canvas #map-button {
+    position: fixed;
+     z-index: 9999;
+    width: 40px;
+    height: 50px;
+    top: 17%;
+    left: 1.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: black;
+    font-size: 20px;
+    padding: 0px;
+    border-color:orange;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.el-icon-s-home {
     color: orange;
+}
+.el-icon-s-home:hover{
+    color: lightgray;
+}
+
+
+.el-icon-location-information {
+    color: orange;
+}
+.el-icon-location-information:hover {
+    color: lightgrey;
+}
+
+#map-button{
+    margin-left: 0px;
 }
 
 
@@ -364,7 +405,19 @@ a, a:hover, a:visited {
     touch-action: unset;
 }
 
+#start{
+    width: 100vw;
+    height: 1800px;
+    background-color: white;
+}
 
-
+#countyClusters {
+    width: 100vw;
+    height: 1000px;
+    background-color: white;
+    opacity: 100%;
+    position: absolute;
+    z-index: 9000;
+}
 </style>
 

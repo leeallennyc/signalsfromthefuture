@@ -46,9 +46,13 @@ export default {
   border-radius: 5px;
 }
 
-.el-icon-caret-right:before {
-    content: "";
+.el-icon-caret-right {
     color: orange;
 }
+
+.el-icon-caret-right:hover {
+    color: white;
+}
+
 
 </style>

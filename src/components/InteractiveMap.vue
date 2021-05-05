@@ -363,65 +363,46 @@ h3 {
 }
 
 #mapContainer {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 
 #mapContainer2 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #mapContainer3 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
+  
 }
 #mapContainer4 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #mapContainer5 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #mapContainer6 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #mapContainer7 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 69vw;
+  height: 100vh;
 }
 #mapContainer8 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #mapContainer9 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #mapContainer10 {
-  width: 60%;
-  height: 700px;
-  padding: 50px;
-  position: flex;
+  width: 65vw;
+  height: 100vh;
 }
 #innerContainer {
   width: 100%;

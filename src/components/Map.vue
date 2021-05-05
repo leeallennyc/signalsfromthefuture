@@ -1,21 +1,18 @@
 <template>
 <div class='App'>
   <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-s-data" circle id="map-button"></el-button></div></div>
-  
 <div id="story">
 <div id="start">
 <div class="mouse_scroll">
-
-		<div class="mouse">
-			<div class="wheel"></div>
-		</div>
-		<div>
-			<span class="m_scroll_arrows unu"></span>
-			<span class="m_scroll_arrows doi"></span>
-			<span class="m_scroll_arrows trei"></span>
-		</div>
+    <div class="mouse">
+        <div class="wheel"></div>
+    </div>
+    <div>
+        <span class="m_scroll_arrows unu"></span>
+        <span class="m_scroll_arrows doi"></span>
+        <span class="m_scroll_arrows trei"></span>
+    </div>
 </div>
-
 </div>
 </div>
 <div id="countyClusters">
@@ -508,7 +505,7 @@ a, a:hover, a:visited {
 	margin: 0 auto;
 	width: 24px;
 	height: 100px;
-	margin-top: 650px;
+	margin-top: 600px;
 }
 
 

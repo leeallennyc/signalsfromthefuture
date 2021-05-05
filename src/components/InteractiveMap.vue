@@ -261,7 +261,7 @@ span {
 .map-overlay #home-button {
     position: fixed;
     z-index: 9999;
-    width: 40px;
+    width: 56px;
     height: 50px;
     top:12%;
     left: 20px;
@@ -273,13 +273,13 @@ span {
     border-color: white;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .map-overlay #map-button {
     position: fixed;
     z-index: 9999;
-    width: 40px;
+    width: 56px;
     height: 50px;
     top: 18%;
     left: 20px;
@@ -291,7 +291,7 @@ span {
     border-color: white;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 #map-button{
@@ -312,6 +312,10 @@ span {
 
 .el-button {
     text-align: center;
+}
+
+.el-icon-location-information {
+    margin-left: 10px;
 }
 
 h2 {

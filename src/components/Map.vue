@@ -366,7 +366,7 @@ a, a:hover, a:visited {
 .mapboxgl-canvas #home-button {
     position: fixed;
     z-index: 9999;
-    width: 40px;
+    width: 60px;
     height: 50px;
     top: 10%;
     left: 10px;
@@ -377,13 +377,13 @@ a, a:hover, a:visited {
     border-color: black;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .mapboxgl-canvas #map-button {
     position: fixed;
     z-index: 9999;
-    width: 40px;
+    width: 60px;
     height: 50px;
     top: 17%;
     left: 10px;
@@ -394,7 +394,7 @@ a, a:hover, a:visited {
     border-color: black;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .el-card__body {
@@ -404,8 +404,10 @@ a, a:hover, a:visited {
   display: flex;
 }
 
-.el-icon-s-home {
+.el-icon-s-home:before {
     color: gray;
+    margin-left: 10px;
+
 }
 .el-icon-s-home:hover{
     color: lightgray;
@@ -416,6 +418,10 @@ a, a:hover, a:visited {
 }
 .el-icon-location-information:hover {
     color: lightgrey;
+}
+
+.el-icon-s-data:before {
+    margin-left: 10px;
 }
 
 #map-button{

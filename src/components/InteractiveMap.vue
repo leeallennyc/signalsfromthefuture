@@ -126,7 +126,7 @@ export default {
       container: "mapContainer",
       style: config2.style,
       center: [-121.9, 37.4],
-      zoom: 8.1,
+      zoom: 9.1,
       pitch: 60,
       bearing: 0
     });
@@ -137,7 +137,7 @@ export default {
       container: "mapContainer2",
       style: config2.style,
       center: [-117.24, 33.5],
-      zoom: 7.0,
+      zoom: 7.8,
       pitch: 35,
       bearing: 0
     });
@@ -147,7 +147,7 @@ export default {
       container: "mapContainer3",
       style: config2.style,
       center: [-87.70, 41.8],
-      zoom: 8,
+      zoom: 9,
       pitch: 60,
       bearing: 0
     });
@@ -157,7 +157,7 @@ export default {
       container: "mapContainer4",
       style: config2.style,
       center: [-121.9, 47.5],
-      zoom: 7.75,
+      zoom: 8.75,
       pitch: 60,
       bearing: 0
     });
@@ -167,7 +167,7 @@ export default {
       container: "mapContainer5",
       style: config2.style,
       center: [-96.5, 30.5],
-      zoom: 6.75,
+      zoom: 7.5,
       pitch: 60,
       bearing: 0
     });
@@ -187,7 +187,7 @@ export default {
       container: "mapContainer7",
       style: config2.style,
       center: [-71.1, 42.37],
-      zoom: 7.5,
+      zoom: 7.75,
       pitch: 35,
       bearing: 0
     });
@@ -197,7 +197,7 @@ export default {
       container: "mapContainer8",
       style: config2.style,
       center: [-77.3, 38.84],
-      zoom: 8,
+      zoom: 8.5,
       pitch: 35,
       bearing: 0
     });
@@ -207,7 +207,7 @@ export default {
       container: "mapContainer9",
       style: config2.style,
       center: [-84.4, 33.74],
-      zoom: 8,
+      zoom: 9,
       pitch: 35,
       bearing: 0
     });
@@ -216,7 +216,7 @@ export default {
     this.mb = new mapboxgl.Map({
       container: "mapContainer10",
       style: config2.style,
-      center: [-119.76, 39.7],
+      center: [-119.76, 40.1],
       zoom: 7.5,
       pitch: 35,
       bearing: 0

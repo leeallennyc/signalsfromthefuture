@@ -274,6 +274,11 @@ body {
     padding:0;
     font-family: sans-serif;
 }
+
+.title {
+    margin-bottom: 10px;
+}
+
 a, a:hover, a:visited {
     color: gray;
 }

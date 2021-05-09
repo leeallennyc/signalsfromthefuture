@@ -36,6 +36,7 @@ export default {
   height: 100px;
   top: 50%;
   left: 92%;
+  text-align: center;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: black;
@@ -53,6 +54,5 @@ export default {
 .el-icon-caret-right:hover {
     color: white;
 }
-
 
 </style>

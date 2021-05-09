@@ -1,25 +1,28 @@
 <template>
 <div class='App'>
-  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-s-data" circle id="map-button"></el-button></div></div>
+  <div id="map"><div class='mapboxgl-canvas'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-s-data" circle id="data-button"></el-button></div></div>
+  
 <div id="story">
 <div id="start">
 <div class="mouse_scroll">
-    <div class="mouse">
-        <div class="wheel"></div>
-    </div>
-    <div>
-        <span class="m_scroll_arrows unu"></span>
-        <span class="m_scroll_arrows doi"></span>
-        <span class="m_scroll_arrows trei"></span>
-    </div>
+
+		<div class="mouse">
+			<div class="wheel"></div>
+		</div>
+		<div>
+			<span class="m_scroll_arrows unu"></span>
+			<span class="m_scroll_arrows doi"></span>
+			<span class="m_scroll_arrows trei"></span>
+		</div>
 </div>
+
 </div>
 </div>
 <div id="countyClusters">
     <el-card>
     <el-row>
     <el-col :span="12"><div class="grid-content bg-purple"><h3>U.S. County Clusters</h3><p>There are <strong>10</strong> main clusters which account for <strong>86%</strong> of all the AI patents filed in our sample. We look at the latitude and longitude of the companies who are granted the patents, the concentration of patents within these regional clusters which contain the term "machine learning" in the abstract to better understand how these patents are clustering throughout the U.S.</p><p>Another variable considered was Personal Income by County Area for the years 2017, 2018, and 2019 -- in addition to the percentage change from the previous year. We found a positive weak correlation in our sample between numbers of patents per county and personal income expressed as +0.34.</p><p>Interestingly we also found a regionalism toward certain types of sectors and AI techniques per region.</p>
-    <el-button @click="enterMap" icon = "el-icon-s-data" circle id="insights-button">Insights</el-button>
+    <el-button @click="enterMap" icon = "el-icon-s-data" circle id="data-button">Insights</el-button>
     </div>
     </el-col>
     <el-col :span="12"><div class="grid-content bg-purple-light"><img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FNumber_of_patents_granted-01.png?v=1620071696600"></div></el-col>
@@ -282,6 +285,7 @@ body {
 a, a:hover, a:visited {
     color: gray;
 }
+
 #map {
     top:0;
     width: 100vw;
@@ -349,7 +353,7 @@ a, a:hover, a:visited {
 .step {
     padding-bottom: 60vh;
     /* margin-bottom: 10vh; */
-    opacity: 0.10;
+    opacity: 0.1;
 }
 .step.active {
     opacity: 0.85;
@@ -373,30 +377,30 @@ a, a:hover, a:visited {
     z-index: 9999;
     width: 60px;
     height: 50px;
-    top: 10%;
-    left: 10px;
+    top: 6%;
+    left: 19px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: black;
+    background-color:rgb(9, 9, 9);
     font-size: 20px;
-    border-color: black;
+    border-color: rgb(9, 9, 9);
     cursor: pointer;
     border-radius: 5px;
     margin-left: 12px;
 }
 
-.mapboxgl-canvas #map-button {
+.mapboxgl-canvas #data-button {
     position: fixed;
     z-index: 9999;
     width: 60px;
     height: 50px;
-    top: 17%;
-    left: 10px;
+    top: 9%;
+    left: 19px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: black;
+    background-color: rgb(9, 9, 9);
     font-size: 20px;
-    border-color: black;
+    border-color: rgb(9, 9, 9);
     cursor: pointer;
     border-radius: 5px;
     margin-left: 12px;
@@ -409,31 +413,23 @@ a, a:hover, a:visited {
   display: flex;
 }
 
-.el-icon-s-home:before {
-    color: gray;
-    margin-left: 10px;
+/* .el-icon-s-home:before {
+    color: grey;
+} */
 
-}
 .el-icon-s-home:hover{
-    color: lightgray;
+    color: rgb(76, 167, 241);
 }
 
-.el-icon-location-information {
+/* .el-icon-s-data:before{
     color: gray;
-}
-.el-icon-location-information:hover {
-    color: lightgrey;
-}
-
-.el-icon-s-data:before {
-    margin-left: 10px;
+} */
+.el-icon-s-data:hover {
+    color: rgb(76, 167, 241);
 }
 
-#map-button{
-    margin-left: 0px;
-}
 
-#insights-button{
+#data-button{
     position: flex;
     width: 100px;
     height: 50px;
@@ -447,7 +443,6 @@ a, a:hover, a:visited {
     border-color: black;
     cursor: pointer;
     border-radius: 5px;
-
 }
 
 .el-row {

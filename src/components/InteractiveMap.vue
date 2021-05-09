@@ -1,5 +1,5 @@
 <template>
-   <div class='map-overlay' id='features'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-location-information" circle id="map-button"></el-button><h2>TOP 10 REGIONAL COUNTIES FOR MACHINE LEARNING PATENTS</h2><div id='pd'>
+  <div class='map-overlay' id='features'><el-button @click="enterHome" icon="el-icon-s-home" circle id="home-button"></el-button><el-button @click="enterMap" icon = "el-icon-location-information" circle id="map-button"></el-button><h2>TOP 10 REGIONAL COUNTIES FOR MACHINE LEARNING PATENTS</h2><div id='pd'>
   </div></div>
   <div class='map-overlay' id='legend'></div>
   <el-card>
@@ -9,7 +9,25 @@
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FSanta_Clara_Counties.png?v=1619995161141">
       </div>
       </el-card>
-    <div id="mapContainer">{{BaseMap}}</div>
+    <div id="mapContainer1">{{BaseMap}}</div>
+  </el-card>
+
+<el-card>
+    <el-card><div id="innerContainer">
+      <h2>KING COUNTY, WASHINGTON</h2>
+      <div id= "chart"><p>King County Washington is the home of Redmond, based Microsoft Licensing, LLC - a holding company of Microsoft. King county makes up 11.8% of AI patents in our sample.</p></div>
+      <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FWashington_Counties.png?v=1619995277625">
+      </div></el-card>
+    <div id="mapContainer2">{{BaseMap}}</div>
+  </el-card>
+
+  <el-card>
+    <el-card><div id="innerContainer">
+      <h2>WESTCHESTER COUNTY, NEW YORK </h2>
+      <div id= "chart"><p>Westchester and Queens County create a micro-region within a larger mega-region of the East Coast. AI Patent activity connects 17 Counties in this region from Western Massachusetts to Ocean County New Jersey. These 17 counties make up 11.8% of all AI patents filed in our sample.</p></div>
+      <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FEastcoast_cluster_Counties.png?v=1619995300290">
+      </div></el-card>
+    <div id="mapContainer3">{{BaseMap}}</div>
   </el-card>
 
   <el-card>
@@ -18,7 +36,7 @@
       <div id= "chart"><p>The region is made up of Orange, San Diego, and Los Angeles Counties. Santa Barbara and Monterey are the northwest. This region makes up 6.1% of AI patents filed in our sample. </p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FLosAngeles_Counties.png?v=1619995248246">
       </div></el-card>
-    <div id="mapContainer2">{{BaseMap}}</div>
+    <div id="mapContainer4">{{BaseMap}}</div>
   </el-card>
 
   <el-card>
@@ -27,16 +45,7 @@
       <div id= "chart"><p>Chicago is county seat of Cook County Illinois. On the Wisconsin border it shares a cluster with DuPage, Lake, and Kenosha counties. Cook County makes up 2% of AI patents in our sample.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FIllinois_Wisconsin_Counties.png?v=1619995271555">
       </div></el-card>
-    <div id="mapContainer3">{{BaseMap}}</div>
-  </el-card>
-
-  <el-card>
-    <el-card><div id="innerContainer">
-      <h2>KING COUNTY, WASHINGTON</h2>
-      <div id= "chart"><p>King County Washington is the home of Redmond, based Microsoft Licensing, LLC - a holding company of Microsoft. King county makes up 11.8% of AI patents in our sample.</p></div>
-      <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FWashington_Counties.png?v=1619995277625">
-      </div></el-card>
-    <div id="mapContainer4">{{BaseMap}}</div>
+    <div id="mapContainer5">{{BaseMap}}</div>
   </el-card>
 
   <el-card>
@@ -44,15 +53,6 @@
       <h2>TRAVIS & HARRIS COUNTIES, TEXAS</h2>
       <div id= "chart"><p>Travis/William Counties, and Harris/Fort Bend make up two smaller regions, with a third to the north made up Collin, Dallas, and Tarrant counties. The Travis and Harris county region make up 2% of AI Patents granted in our sample.</p></div>
       <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FTexas_Counties.png?v=1619995233117">
-      </div></el-card>
-    <div id="mapContainer5">{{BaseMap}}</div>
-  </el-card>
-  
-  <el-card>
-    <el-card><div id="innerContainer">
-      <h2>WESTCHESTER COUNTY, NEW YORK </h2>
-      <div id= "chart"><p>Westchester and Queens County create a micro-region within a larger mega-region of the East Coast. AI Patent activity connects 17 Counties in this region from Western Massachusetts to Ocean County New Jersey. These 17 counties make up 11.8% of all AI patents filed in our sample.</p></div>
-      <img src= "https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2FEastcoast_cluster_Counties.png?v=1619995300290">
       </div></el-card>
     <div id="mapContainer6">{{BaseMap}}</div>
   </el-card>
@@ -123,7 +123,7 @@ export default {
   mounted() {
     mapboxgl.accessToken = this.accessToken;
       this.mb = new mapboxgl.Map({
-      container: "mapContainer",
+      container: "mapContainer1",
       style: config2.style,
       center: [-121.9, 37.4],
       zoom: 9.1,
@@ -136,26 +136,6 @@ export default {
     this.mb = new mapboxgl.Map({
       container: "mapContainer2",
       style: config2.style,
-      center: [-117.24, 33.5],
-      zoom: 7.8,
-      pitch: 35,
-      bearing: 0
-    });
-    this.mb.on('load', ()=> {
-    });
-    this.mb = new mapboxgl.Map({
-      container: "mapContainer3",
-      style: config2.style,
-      center: [-87.70, 41.8],
-      zoom: 9,
-      pitch: 60,
-      bearing: 0
-    });
-    this.mb.on('load', ()=> {
-    });
-    this.mb = new mapboxgl.Map({
-      container: "mapContainer4",
-      style: config2.style,
       center: [-121.9, 47.5],
       zoom: 8.75,
       pitch: 60,
@@ -163,18 +143,9 @@ export default {
     });
     this.mb.on('load', ()=> {
     });
+
     this.mb = new mapboxgl.Map({
-      container: "mapContainer5",
-      style: config2.style,
-      center: [-96.5, 30.5],
-      zoom: 7.5,
-      pitch: 60,
-      bearing: 0
-    });
-    this.mb.on('load', ()=> {  
-    });
-    this.mb = new mapboxgl.Map({
-      container: "mapContainer6",
+      container: "mapContainer3",
       style: config2.style,
       center: [-73.7, 41.05],
       zoom: 7,
@@ -183,6 +154,40 @@ export default {
     });
     this.mb.on('load', ()=> {
     });
+
+    this.mb = new mapboxgl.Map({
+      container: "mapContainer4",
+      style: config2.style,
+      center: [-117.24, 33.5],
+      zoom: 7.8,
+      pitch: 35,
+      bearing: 0
+    });
+    this.mb.on('load', ()=> {
+    });
+
+    this.mb = new mapboxgl.Map({
+      container: "mapContainer5",
+      style: config2.style,
+      center: [-87.70, 41.8],
+      zoom: 9,
+      pitch: 60,
+      bearing: 0
+    });
+    this.mb.on('load', ()=> {
+    });
+   
+    this.mb = new mapboxgl.Map({
+      container: "mapContainer6",
+      style: config2.style,
+      center: [-96.5, 30.5],
+      zoom: 7.5,
+      pitch: 60,
+      bearing: 0
+    });
+    this.mb.on('load', ()=> {  
+    });
+    
     this.mb = new mapboxgl.Map({
       container: "mapContainer7",
       style: config2.style,
@@ -193,6 +198,7 @@ export default {
     });
     this.mb.on('load', ()=> { 
     });
+
     this.mb = new mapboxgl.Map({
       container: "mapContainer8",
       style: config2.style,
@@ -203,6 +209,7 @@ export default {
     });
     this.mb.on('load', ()=> {
     });
+
     this.mb = new mapboxgl.Map({
       container: "mapContainer9",
       style: config2.style,
@@ -213,6 +220,7 @@ export default {
     });
     this.mb.on('load', ()=> {
     });
+
     this.mb = new mapboxgl.Map({
       container: "mapContainer10",
       style: config2.style,
@@ -258,45 +266,45 @@ span {
   padding: 0 auto;
 }
 
-.map-overlay #home-button {
+#home-button {
     position: fixed;
     z-index: 9999;
-    width: 56px;
-    height: 50px;
-    top:12%;
-    left: 20px;
+    width: 35px;
+    height: 35px;
+    top: 14%;
+    left: 18px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: white;
-    opacity: .8;
-    font-size: 20px;
+    opacity: .7;
+    font-size: 22px;
     border-color: white;
     cursor: pointer;
     border-radius: 5px;
     margin-left: 15px;
 }
 
-.map-overlay #map-button {
+#map-button {
     position: fixed;
     z-index: 9999;
-    width: 56px;
-    height: 50px;
-    top: 18%;
-    left: 20px;
+    width: 35px;
+    height: 35px;
+    top: 19%;
+    left: 18px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: white;
-    opacity: .8;
-    font-size: 20px;
+    opacity: .7;
+    font-size: 22px;
     border-color: white;
     cursor: pointer;
     border-radius: 5px;
     margin-left: 15px;
 }
 
-#map-button{
+/* #map-button{
     margin-left: 0px;
-}
+} */
 
 .el-button.el-button--primary {
   color: gray;
@@ -314,26 +322,29 @@ span {
     text-align: center;
 }
 
-.el-icon-location-information {
+/* .el-icon-location-information {
     margin-left: 10px;
-}
+} */
+
+
 
 h2 {
-  color: rgb(171, 171, 171);
-}
-
-h2, h3 {
   font-family: Futura, Verdana, Geneva, Tahoma, sans-serif;
   margin: 10px;
   font-size: 1.2em;
+  color: rgb(171, 171, 171);
 }
+
 h3 {
+  font-family: Futura, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
   margin: 0px;
+  color:  rgb(171, 171, 171);
 }
-.map-overlay{
+
+/* .map-overlay{
   padding: 0px;
-}
+} */
 
 /* .el-row {
     margin-bottom: 20px;
@@ -360,13 +371,15 @@ h3 {
   } */
 
 #features {
-  padding: 5px;
-}
-.el-button {
-  text-align: left;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
-#mapContainer {
+/* .el-button {
+  text-align: left;
+} */
+
+#mapContainer1 {
   width: 65vw;
   height: 100vh;
 }
@@ -375,39 +388,47 @@ h3 {
   width: 65vw;
   height: 100vh;
 }
+
 #mapContainer3 {
   width: 65vw;
   height: 100vh;
-  
 }
+
 #mapContainer4 {
   width: 65vw;
   height: 100vh;
 }
+
 #mapContainer5 {
   width: 65vw;
   height: 100vh;
 }
+
 #mapContainer6 {
   width: 65vw;
   height: 100vh;
 }
+
 #mapContainer7 {
   width: 69vw;
   height: 100vh;
 }
+
 #mapContainer8 {
   width: 65vw;
   height: 100vh;
 }
+
 #mapContainer9 {
   width: 65vw;
   height: 100vh;
 }
+
 #mapContainer10 {
   width: 65vw;
   height: 100vh;
 }
+
 #innerContainer {
   width: 100%;
   height: 700px;
@@ -421,12 +442,12 @@ h3 {
   padding: 20px;
   position: flex;
 }
-.el-card__body {
+/* .el-card__body {
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 1px;
   display: flex;
-}
+} */
 #chart {
   width: 400px;
   position: flex;

@@ -8,7 +8,7 @@ export const config = {
         {
             id: 'AI-Patents',
             alignment: 'left',
-            title: 'Signals From the Future',
+            title: 'SIGNALS FROM THE FUTURE',
             description: 'Visualizes AI-related patent filings by region in the United States between 2016-2020. I explore this AI landscape through U.S. census data and approximately 2,300 patents containing the words “machine learning” in the abstract. This research provides a tool for curious individuals who are interested in learning about where trends are headed in AI, for commercialization offices within research institutes, who may want to partner with companies who are setting up AI labs nearest them, or to policy makers, who may be searching for a clearer picture into AI patent filings in relation to their communities.', 
             image: 'https://cdn.glitch.com/10616458-a71b-4fd2-8ee0-fc4bccd7a4fd%2Fcolor_legend-01.png?v=1619203727208',
             location: {
